@@ -10,7 +10,7 @@ upperCaseMinusE = function(string){
     let letter;
     letter = string[i];
     if ( letter === "e") {
-      result = letter;
+      result = result + letter;
     } else {
       result = result + letter.toUpperCase();
     }
