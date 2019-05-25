@@ -1,24 +1,12 @@
-let userString, upperCaseMinusE, upperCasedString;
-// First, get string rom user
-userString = prompt("What do you want to UPPeRCASe?");
-//Function for uppercase
-upperCaseMinusE = function(string){
-  //Something will happen
-  let result;
-  result = "";
-  for ( let i = 0; i < string.length; i = i + 1) {
-    let letter;
-    letter = string[i];
-    if ( letter === "e") {
-      result = result + letter;
-    } else {
-      result = result + letter.toUpperCase();
-    }
-  }
-  return result;
-};
-//Third, pass ueser's string to Function
-//assign the return to a variable.
-upperCasedString = upperCaseMinusE(userString);
-//print the string to the webpage
-$("#response").html(upperCasedString);
+let leonardo, donatello, raphael, michaelangelo, turtles, weapons;
+leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
+donatello = {name: "Donatello", color: "purple", weapon: "bo"};
+raphael = {name: "Raphael", color: "red", weapon: "sai"};
+michaelangelo = {name: "Michaelangelo", color: "yellow", weapon: "nunchaku"};
+turtles = [leonardo, donatello, raphael, michaelangelo];
+
+weapons = turtles.forEach(function(turtle){
+  weapons = weapons + turtle.weapon + " ";
+});
+
+$("#response").html(weapons);
